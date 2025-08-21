@@ -45,6 +45,7 @@ export const updateProduct = async (req, res) => {
         const updated_product = await Product.findByIdAndUpdate(id, product, { new: true })
         res.status(200).json({ success: true, data: updated_product })
     } catch (error) {
+        console.log(" ⛔ Error in product update...")
         res.status(500).json({ success: false, message: "Server error" })
     }
 }
@@ -58,7 +59,7 @@ export const deleteProduct = async (req, res) => {
         res.status(200).json({ success: true, message: "Product deleted successfully" });
     }
     catch (error) {
-        console.log("Error in fetching product", error.message)
+        console.log(" ⛔ Error in fetching product", error.message)
         res.status(404).json({ success: false, message: "Product not found" });
     }
 }
