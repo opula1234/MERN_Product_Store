@@ -13,7 +13,7 @@ app.use("/api/products", productRoutes)
 
 app.listen(5000, () => {
     connectDB();
-    console.log("💻 ⚙️   Server is running on port  #️⃣  3000 Hello world! learning mern stack");
+    console.log("💻 ⚙️   Server is running on port  #️⃣  5000 Hello world! learning mern stack");
 });
 
 
